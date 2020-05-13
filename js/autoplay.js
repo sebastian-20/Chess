@@ -8,14 +8,12 @@ var mins;
 var cronometer;
 
 var board = new Array(8);
-
-
 	 
 function ResetTime(){
     clearInterval(cronometer);
 }
 
-function StarTime(){
+function IniciaTime(){
     secs =0;
     mins =0;
     s = document.getElementById("seconds");
@@ -44,18 +42,7 @@ function Check_SuccessfulEnd(){
 
 	SuccessfulEnd = true;
 	if (Moves > 0) SuccessfulEnd = false;
-	/*
-	for (i=0; i<8 && SuccessfulEnd; i++){
-		for (j=0; j<8 && SuccessfulEnd; j++){
-			//if (board[x][y] == 0) SuccessfulEnd=false; //habria que depurar para que nada mas empezar no salga esto
-			cell = document.getElementById("c"+x+y);
-			if (cell.style.background != "none repeat scroll 0% 0% green" || 
-				cell.style.background != "none repeat scroll 0% 0% orange" ) 
-				SuccessfulEnd=false;
-
-		}
-	}
-	*/
+	
 	if (SuccessfulEnd){
 		ShowGameOver("You win!!", "Return to Game", false);
 		autoplay();
@@ -66,14 +53,14 @@ function Check_GameOver(x, y){
 
 	Options = 0;
 
-	Check_Move(x, y, 1, 2);		//check move right - top long
-	Check_Move(x, y, 2, 1);		//check move right long - top
-	Check_Move(x, y, 1, -2);	//check move right - bottom long
-	Check_Move(x, y, 2, -1);	//check move right long - bottom
-	Check_Move(x, y, -1, 2);	//check move left - top long
-	Check_Move(x, y, -2, 1);	//check move left long - top
-	Check_Move(x, y, -1, -2);	//check move left - bottom long
-	Check_Move(x, y, -2, -1);	//check move left long - bottom
+	Check_Move(x, y, 1, 2);		
+	Check_Move(x, y, 2, 1);		
+	Check_Move(x, y, 1, -2);	
+	Check_Move(x, y, 2, -1);	
+	Check_Move(x, y, -1, 2);	
+	Check_Move(x, y, -2, 1);	
+	Check_Move(x, y, -1, -2);	
+	Check_Move(x, y, -2, -1);	
 
 	cont_moves = document.getElementById("options").innerHTML = Options;
 
