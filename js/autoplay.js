@@ -124,7 +124,7 @@ function autoplay(){
 	message = document.getElementById("message");
 	message.style.display = "none";
 
-	for (i=0; i<10; i++) board[i]= new Array(8);
+	for (i=0; i<10; i++) {board[i]= new Array(8);}
 
 	ClearBoard();
 	ResetTime();
