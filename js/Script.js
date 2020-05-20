@@ -13,6 +13,8 @@ var alfil1 = ['2','0'];
 var ficha = 0;
 
 var board = new Array(8);
+var CheckTrue;
+var array=[[],[],[],[],[],[],[],[],[]];
 
 window.onload=autoplay;
 	 
@@ -44,15 +46,9 @@ function IniciaTime(){
         ,1000);
 }
 
-function SelectCell(x, y){
-    
-    PaintCell(x,y);
 
-}
 
 function PaintCell(x, y, ficha){
-    CellSelected_x=x;
-	CellSelected_y=y;
     board[x][y]=1
     if(ficha==1){
         cell = document.getElementById("c"+x+y).innerHTML = 
@@ -72,6 +68,7 @@ function autoplay(){
     ClearBoard();
     ResetTime();
     CargarPosiciones();
+    ShowMovements();
 
 }
 
@@ -100,7 +97,7 @@ function CargarPosiciones(){
 function ClearBoard(){
 	for (i=0; i<8; i++){
 		for (j=0; j<8; j++){
-			board[i][j]=0;
+			board[i][j];
 
 			cell = document.getElementById("c"+i+j);
 			cell.style.background = "";  
@@ -110,11 +107,46 @@ function ClearBoard(){
 
 }
 
-function CheckCell(x, y){
+function PaintBeforeCell(CellSelected_x,CellSelected_y){
+    document.getElementById("c"+CellSelected_x+CellSelected_y).innerHTML = 
+    "<img id='" + CellSelected_x + CellSelected_y + "</img>"
+}
+
+function ShowMovements(x,y){
+    document.getElementById("c"+x+y).classList.add('MarcarMovimiento');
+    //document.getElementById("c"+CellSelected_x+CellSelected_y).classList.remove('cell black');
+}
+
+function ValidarMovimiento(ficha, x, y, CellSelected_x,CellSelected_y){
     CheckTrue = false;
+    if(ficha==1){
+        dif_x = x - CellSelected_x;
+        dif_y = y - CellSelected_y;
+        
+        if (dif_x == 1 && dif_y == 2)   CheckTrue = true; 
+        if (dif_x == 1 && dif_y == -2)  CheckTrue = true; 
+        if (dif_x == 2 && dif_y == 1)   CheckTrue = true; 
+        if (dif_x == 2 && dif_y == -1)  CheckTrue = true; 
+        if (dif_x == -1 && dif_y == 2)  CheckTrue = true; 
+        if (dif_x == -1 && dif_y == -2) CheckTrue = true; 
+        if (dif_x == -2 && dif_y == 1)  CheckTrue = true; 
+        if (dif_x == -2 && dif_y == -1) CheckTrue = true; 
+    }
+    if(ficha==2){
+        dif_x = x - CellSelected_x;
+        dif_y = y - CellSelected_y;
+        if (dif_x >= 1 && dif_y >= 1 && dif_x==dif_y)   CheckTrue = true;
+        if (dif_x <= -1 && dif_y <= -1 && dif_x==dif_y)   CheckTrue = true;
+        if (dif_x <= -1 && dif_y >= 1 && (dif_x+dif_y)+dif_y==dif_y)  CheckTrue = true;
+        if (dif_x >= 1 && dif_y <= -1 && (dif_x+dif_y)+dif_y==dif_y)   CheckTrue = true; 
+    }
+}
+
+function CheckCell(x, y){
     cont=cont+1;
 
 if(cont==1){
+    window.alert(cont);
     for (i=0;i<2;i++){
         if(i==0){
             for (j=0; j<2; j++){
@@ -129,7 +161,14 @@ if(cont==1){
                 ficha=1;//Caballo
                 CellSelected_x=x;
                 CellSelected_y=y;
-                
+                for(i=0;i<9;i++){
+                    for(j=0;j<9;j++){
+                        ValidarMovimiento(ficha, i, j, CellSelected_x, CellSelected_y);
+                        if (CheckTrue){
+                            ShowMovements(i,j);
+                        }
+                    }
+                }
             }
         }
         else if(i==1){
@@ -145,6 +184,14 @@ if(cont==1){
                 ficha=2;//Alfil
                 CellSelected_x=x;
                 CellSelected_y=y;
+                for(i=0;i<9;i++){
+                    for(j=0;j<9;j++){
+                        ValidarMovimiento(ficha, i, j, CellSelected_x, CellSelected_y);
+                        if (CheckTrue){
+                            ShowMovements(i,j);
+                        }
+                    }
+                }
                 break;
             }
         }
@@ -155,40 +202,29 @@ if(cont==1){
   }
     
 else {
-    if(ficha==1){
-        dif_x = x - CellSelected_x;
-        dif_y = y - CellSelected_y;
-        
-        if (dif_x == 1 && dif_y == 2)   CheckTrue = true; 
-        if (dif_x == 1 && dif_y == -2)  CheckTrue = true; 
-        if (dif_x == 2 && dif_y == 1)   CheckTrue = true; 
-        if (dif_x == 2 && dif_y == -1)  CheckTrue = true; 
-        if (dif_x == -1 && dif_y == 2)  CheckTrue = true; 
-        if (dif_x == -1 && dif_y == -2) CheckTrue = true; 
-        if (dif_x == -2 && dif_y == 1)  CheckTrue = true; 
-        if (dif_x == -2 && dif_y == -1) CheckTrue = true; 
-        
+    ValidarMovimiento(ficha, x, y, CellSelected_x, CellSelected_y)
+    if(ficha==1){ 
+        window.alert(cont);
         if (CheckTrue){
             cont=0;
             caballo1.splice(0,2,x,y);
             PaintCell(x,y,1);
+            PaintBeforeCell(CellSelected_x,CellSelected_y);
         } 
     }
     if(ficha==2){
-        dif_x = x - CellSelected_x;
-        dif_y = y - CellSelected_y;
-        if (dif_x >= 1 && dif_y >= 1 && dif_x==dif_y)   CheckTrue = true;
-        if (dif_x <= -1 && dif_y <= -1 && dif_x==dif_y)   CheckTrue = true;
-        if (dif_x <= -1 && dif_y >= 1 && (dif_x+dif_y)+dif_y==dif_y)  CheckTrue = true;
-        if (dif_x >= 1 && dif_y <= -1 && (dif_x+dif_y)+dif_y==dif_y)   CheckTrue = true; 
-        
-        if (CheckTrue){
-            cont=0;
+        if (CheckTrue){        
+            cont=0; 
             alfil1.splice(0,2,x,y);
             PaintCell(x,y,2);
+            PaintBeforeCell(CellSelected_x,CellSelected_y);
+            ShowMovements(CellSelected_x,CellSelected_y);
         } 
     }
-
+    else{
+        cont=0;
+        windows.alert("Hola");
+    }
 }
 
 

@@ -5,12 +5,13 @@ body{
 	background-color: #FAF8EF;
 }
 #content{
+	position: center;
 	width: 100%;
 	margin: 0 auto;
 }
 
 #game{
-	position: relative;
+	position: center;
 	width: 80%;
 	margin:0 auto;
 }
@@ -20,7 +21,7 @@ body{
 	text-align: center;
 	width: 100%;
 	display: inline-block;
-	margin: 10px 0px 20px 0px;
+	margin: 30px 30px 20px 30px;
 }
 #content_board{
 	text-align: center;
@@ -47,6 +48,12 @@ body{
 	box-shadow: inset 0px 0px 6px green,
 				inset 0px 0px 2px green,
 				inset 0px 0px 15px green;
+}
+
+.MarcarMovimiento{
+	box-shadow: inset 0px 0px 6px rgb(40, 7, 187),
+				inset 0px 0px 2px rgb(40, 7, 187),
+				inset 0px 0px 15px rgb(40, 7, 187);
 }
 
 #board .row .cell img{
@@ -105,56 +112,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', end
 
 #title{
 	width: 100%;
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 	text-align: center;
-}
-#title div.twitter{
-	margin: 20px 0px;
 }
 
-#title #scores{
-	text-align: center;
-	margin-top: 30px;
-}
 
-#title #scores .score{
-	background-color:#776E65; 
-	border-radius: 25px;
-	color: #FAF8EF;
-	display: inline-block;
-	font-size: 1.5em;
-	padding: 0px 15px;
-	text-align: center;
-	margin-bottom: 10px;
-	width: 140px;
-}
 #title #scores .score p{
 	margin-top: 10px;
 }
-#title #scores .score #time{
-	text-align: left;
-	padding-left: 10px;
-}
-#title #scores .score #options,
-#Iniciar{
-	background-color:rgb(22, 209, 63); 
-	border-radius: 25px;
-	color: #FAF8EF;
-	display: inline-block;
-	font-size: 1.5em;
-	padding: 0px 15px;
-	text-align: center;
-	margin-bottom: 10px;
-	width: 140px;
-	text-align: center;
-	margin-top: 30px;
-}
 
-#title #scores .score #time{
-	font-size: 2em;
-	margin: -20px 0px 0px 0px;
-
-}
 
 
 #message{
@@ -245,7 +211,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', end
 	}
 	#title h1{
 		width: 30%;
-		vertical-align: middle;
 		text-align: center;
 
 	}
@@ -255,5 +220,66 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#514200', end
 
 
 
+#categorias{
+	width: 900px;
+	height: auto; overflow: hidden;
+	border: 0px solid rgb(230, 222, 222);
+	margin: auto;
+}
+
+.uno{
+	width: 280px;
+	height: auto; overflow: hidden;
+	border: 1px solid #ccc;
+	float: left;
+	padding: 5px;
+	text-align: center;
+	color: #4682b4;
+}
+.unod{
+	width: 280px;
+	height: auto; overflow: hidden;
+	border: 0px solid rgb(255, 255, 255);
+	float: left;
+	padding: 5px;
+	text-align: center;
+	color: #4682b4;
+}
+
+.parrafo{
+	color: #707070;
+	text-align: justify;
+}
+.dos{
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.leer-mas{
+	text-decoration: none;
+	border: 1px solid #006699;
+	padding: 10px 20px 10px 20px;
+	margin-bottom: 10px;
+}
 
 
+
+
+#izq{
+	width: 585px;
+	height: auto; overflow: hidden;
+	border: 1px solid rgb(0, 0, 0);
+	float: left;
+	padding: 5px; color: #4682b4;
+}
+
+.img{
+	margin-right: 7px;
+	margin-bottom: 7px;
+}
+
+footer{
+	width: 1350px;
+	height: 100px;
+	text-align: center;
+}
