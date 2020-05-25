@@ -29,7 +29,7 @@ body{
 #board{
 	width: auto;
 	position: relative;
-	padding: 3px 0px 0px 3px;
+	padding: 3px 0px 0px 300px;
 }
 #board .row{
 	padding: 0px;
@@ -282,4 +282,346 @@ footer{
 	width: 1350px;
 	height: 100px;
 	text-align: center;
+}
+
+/*#General{
+    margin: auto;
+    margin-top: 60px;
+    width: 800px;
+    height: 1200px;
+    background-color: beige;
+}*/
+
+#CuadroBase{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroBase:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaBase{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaBase{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaBase{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:14px;
+}
+
+#Texto{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#CuadroPeon{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroPeon:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaPeon{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaPeon{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaPeon{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:14px;
+}
+
+#CuadroAlfil{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroAlfil:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaAlfil{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaAlfil{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaAlfil{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:15px;
+}
+
+#CuadroCaballo{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroCaballo:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaCaballo{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaCaballo{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaCaballo{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:13px;
+}
+
+#CuadroTorre{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroTorre:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaTorre{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaTorre{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaTorre{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:15px;
+}
+
+#CuadroRey{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroRey:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaRey{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaRey{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaRey{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:13px;
+}
+
+#CuadroReina{
+    float: right;
+    margin-top: 0px;
+    margin-right: 30px;
+    width: 300px;
+    height: 460px;
+    background:url(../images/texture.jpg); 
+    border:5px solid BLACK;
+    
+}
+
+#CuadroReina:before{
+    content: "";
+    width: 300px;
+    height: 460px;
+    background-color: azure;
+    position: absolute;
+    opacity: 0.5 ;
+}
+
+#ImgFichaReina{
+    float: center;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 204, 88, 0.48);
+    border:5px solid black;
+    padding: 15px;
+    position: relative;
+}
+
+#TituloReglaReina{
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#DesReglaReina{
+    color: black;
+    font-family: cursive;
+    position: relative;
+    font-size:15px;
 }
