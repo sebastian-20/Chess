@@ -1037,7 +1037,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=1;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/caballo..png'></img><div id=Texto> <p id=TituloReglaCaballo>Caballo:</p><p id=DesReglaCaballo>El caballo es la pieza más especial en el ajedrez, ya que tiene una flexibilidad que le hace una pieza poderosa. El caballo es la única pieza del tablero que puede saltar sobre otras piezas. El caballo se mueve dos casillas en dirección horizontal o vertical y después una casilla más en ángulo recto. El movimiento del caballo tiene la forma de una “L ”. El caballo siempre se cae sobre una casilla del color contrario a la de su casilla inicial. El caballo puede saltar sobre piezas de cualquier color mientras se mueve hasta su casilla de destino, pero no captura a ninguna de las piezas sobre las que salte.</p></div>"
+                "<img id='ImgFichaBase' src='images/caballo..png'></img><div id=Texto> <p id=TituloReglaCaballo>Caballo:</p><p id=DesReglaCaballo>(1) El caballo es el unico que puede saltar sobre otras fichas.<br/><br/>(2)El movimiento del caballo es parecido al de una L.<br/><br/>(3)El caballo siempre cae sobre una celda de color opuesto al de la celda previa al movimineto.<br/><br/>(4) No captura a ninguna de las fichas sobre las que salta a no ser que la ficha del oponente se encuentre en la celda de destino. </p></div>"
             }     
         }
         if(i==1){
@@ -1049,7 +1049,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=2;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/alfil..png'></img><div id=Texto> <p id=TituloReglaAlfil>Alfil:</p><p id=DesReglaAlfil>El alfil se mueve sobre el tablero en una línea recta diagonal. Se puede mover tantas casillas como se quiera, hasta que se encuentre con el final del tablero o con otra pieza. El alfil no puede saltar sobre otras piezas. Captura del mismo modo que se desplaza, colocándose en la casilla de la pieza oponente. Debido a la manera en la que se mueve el alfil, la pieza siempre permanece en las casillas del mismo color que su casilla original.</p></div>"
+                "<img id='ImgFichaBase' src='images/alfil..png'></img><div id=Texto> <p id=TituloReglaAlfil>Alfil:</p><p id=DesReglaAlfil>(1) Se mueve de manera diagonal tantas celdas como quiera siempre y cuando no se encuentre con fichas aliadas.<br/><br/>(2) No puede saltar sobre otras fichas.<br/><br/>(3) Captura del mismo modo en que se desplaza, colocandose sobre la celda de la ficha del oponente.<br/><br/>(4) Siempre permanece en las celdas del mismo color de su celda original.</p></div>"
             }
         }
         if(i==2){
@@ -1061,7 +1061,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=3;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/torre..png'></img><div id=Texto> <p id=TituloReglaTorre>Torre:</p><p id=DesReglaTorre>La torre se mueve en una línea recta horizontal o vertical a lo largo de cualquier número de casillas desocupadas, hasta que alcanza el final del tablero o es bloqueado por otra pieza. No puede saltar sobre otras piezas. La torre captura de la misma manera en la que se mueve, ocupando la casilla en la que está la pieza oponente. La torre puede colocarse en cualquier casilla del tablero, por tanto es una de las piezas más poderosas.</p></div>"
+                "<img id='ImgFichaBase' src='images/torre..png'></img><div id=Texto> <p id=TituloReglaTorre>Torre:</p><p id=DesReglaTorre>(1) La torre se mueve de forma vertical y horizontal tantas celdas como quiera siempre y cuando estas no estén ocupadas por fichas aliadas.<br/><br/>(2) No puede saltar sobre otras fichas.<br/><br/>(3)La torre captura de la misma manera en que se mueve, ocupando la celda en la que está la ficha del oponente.</p></div>"
             }
         }
         if(i==3){
@@ -1073,7 +1073,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=4;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/reina..png'></img><div id=Texto> <p id=TituloReglaReina> Reina:</p><p id=DesReglaReina>La reina se considera como la pieza más poderosa del tablero. Se puede mover cualquier número de casillas en línea recta, tanto de manera horizontal como vertical o diagonal. La reina se mueve como la torre y el alfil juntos. Excepto en una captura, la reina se debe mover a una casilla desocupada y no puede saltar sobre otras piezas. La reina captura de la misma manera en la que se desplaza, colocándose en la casilla de la pieza oponente.</p></div>"
+                "<img id='ImgFichaBase' src='images/reina..png'></img><div id=Texto> <p id=TituloReglaReina> Reina:</p><p id=DesReglaReina>(1) Puede moverse el numero de celdas que quiera en cualquier dirección siempre y cuando no esté ocupada por una ficha aliada.<br/><br/>(2) La reina no puede saltar sobre otras fichas.<br/><br/>(3) Captura de la misma manera en la que se desplaza, conlocandose en la celda de la ficha oponente.</p></div>"
             }
         }
         if(i==4){
@@ -1085,7 +1085,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=5
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/rey..png'></img><div id=Texto> <p id=TituloReglaRey>Rey:</p><p id=DesReglaRey>El rey es la pieza más importante del ajedrez. Si el rey está sitiado, de manera que su captura es inevitable, la partida se termina y ese jugador pierde. El rey puede moverse a cualquier casilla adyacente, es decir, se puede mover una casilla en cualquier dirección: horizontal, vertical o diagonal. No se puede mover a una casilla ocupada por otra pieza del mismo color. El rey captura de la misma manera en que se mueve. Hay otra limitación adicional al movimiento del rey: no puede moverse a ninguna casilla que le expusiera al ataque de una pieza oponente (lo que se llama “jaque ”).</p></div>"
+                "<img id='ImgFichaBase' src='images/rey..png'></img><div id=Texto> <p id=TituloReglaRey>Rey:</p><p id=DesReglaRey>(1) Es la ficha más importante del ajedrez.<br/><br/>(2) Sí el rey se encuentra en una celda en la que su captura sea inevitable la partida se termina y pierde ese jugador.<br/><br/>(3) El rey puede moverse a cualquier celda adyasente a su posición.<br/><br/>(4) No puede moverse a una celda de una ficha aliada.<br/><br/>(5) El rey captura de la misma manera como se mueve.<br/><br/>(6) El rey no puede moverse a ninguna celda que lo ponga en riesgo, ya que entraria en jaque.</p></div>"
             }
         }
         if(i==5){
@@ -1097,7 +1097,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>"  
             }
         }
         if(i==6){
@@ -1121,7 +1121,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=2;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/alfil..png'></img><div id=Texto> <p id=TituloReglaAlfil>Alfil:</p><p id=DesReglaAlfil>El alfil se mueve sobre el tablero en una línea recta diagonal. Se puede mover tantas casillas como se quiera, hasta que se encuentre con el final del tablero o con otra pieza. El alfil no puede saltar sobre otras piezas. Captura del mismo modo que se desplaza, colocándose en la casilla de la pieza oponente. Debido a la manera en la que se mueve el alfil, la pieza siempre permanece en las casillas del mismo color que su casilla original.</p></div>"
+                "<img id='ImgFichaBase' src='images/alfil..png'></img><div id=Texto> <p id=TituloReglaAlfil>Alfil:</p><p id=DesReglaAlfil>(1) Se mueve de manera diagonal tantas celdas como quiera siempre y cuando no se encuentre con fichas aliadas.<br/><br/>(2) No puede saltar sobre otras fichas.<br/><br/>(3) Captura del mismo modo en que se desplaza, colocandose sobre la celda de la ficha del oponente.<br/><br/>(4) Siempre permanece en las celdas del mismo color de su celda original.</p></div>"
             }
         }
         if(i==8){
@@ -1133,7 +1133,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=1;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/caballo..png'></img><div id=Texto> <p id=TituloReglaCaballo>Caballo:</p><p id=DesReglaCaballo>El caballo es la pieza más especial en el ajedrez, ya que tiene una flexibilidad que le hace una pieza poderosa. El caballo es la única pieza del tablero que puede saltar sobre otras piezas. El caballo se mueve dos casillas en dirección horizontal o vertical y después una casilla más en ángulo recto. El movimiento del caballo tiene la forma de una “L ”. El caballo siempre se cae sobre una casilla del color contrario a la de su casilla inicial. El caballo puede saltar sobre piezas de cualquier color mientras se mueve hasta su casilla de destino, pero no captura a ninguna de las piezas sobre las que salte.</p></div>"
+                "<img id='ImgFichaBase' src='images/torre..png'></img><div id=Texto> <p id=TituloReglaTorre>Torre:</p><p id=DesReglaTorre>(1) La torre se mueve de forma vertical y horizontal tantas celdas como quiera siempre y cuando estas no estén ocupadas por fichas aliadas.<br/><br/>(2) No puede saltar sobre otras fichas.<br/><br/>(3)La torre captura de la misma manera en que se mueve, ocupando la celda en la que está la ficha del oponente.</p></div>"
             }     
         }
         if(i==9){
@@ -1145,7 +1145,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>" 
             }
         }
         if(i==10){
@@ -1157,7 +1157,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>" 
             }
         }
         if(i==11){
@@ -1169,7 +1169,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>" 
             }
         }
         if(i==12){
@@ -1181,7 +1181,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>"  
             }
         }
         if(i==13){
@@ -1193,7 +1193,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>" 
             }
         }
         if(i==14){
@@ -1205,7 +1205,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>" 
             }
         }
         if(i==15){
@@ -1217,7 +1217,7 @@ function FichaSeleccionada(x, y){
                 CellSelected_y=y;
                 tipoFicha=6;
                 cell = document.getElementById("CuadroBase").innerHTML = 
-                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>El peón es la pieza más numerosa y la menos poderosa del tablero de ajedrez. Los peones tienen un movimiento inusual. Normalmente, el peón solo se mueve hacia delante, una casilla cada vez. Una excepción es la primera vez que se mueve un peón, que se puede mover dos casillas hacia delante. El peón no puede saltar sobre otras piezas, cualquier pieza que esté justo delante de un peón bloquea su avance a esa casilla. El peón es la única pieza que no captura de la misma manera que se mueve, sino que lo hace en diagonal. No puede capturar moviéndose hacia delante.</p></div>"
+                "<img id='ImgFichaBase' src='images/peon..png'></img><div id=Texto> <p id=TituloReglaPeon>PEÓN:</p><p id=DesReglaPeon>(1)Solo se puede mover una celda hacia adelante.<br/><br/>(2)Tiene una excepcion en su primer movimiento, donde le es permitido moverse dos celdas hacia adelamte.<br/><br/>(3)Cualquier ficha que esté justo delante de un peón  bloquea su avance.<br/><br/>(4)El peón no captura de la mima manera que se mueve, sino que lo hace en diagonal.</p></div>" 
             }
         }
     }
